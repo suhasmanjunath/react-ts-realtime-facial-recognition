@@ -1,50 +1,78 @@
-# React + TypeScript + Vite
+# Real-Time Facial Recognition App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About the Project
 
-Currently, two official plugins are available:
+This project demonstrates a real-time facial recognition application built using React, Vite, TypeScript, and TensorFlow\.js. By utilizing the BlazeFace model from TensorFlow\.js, this app detects faces in a webcam feed and draws bounding boxes around them, providing a lightweight and efficient face detection solution.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Real-Time Face Detection**: Detect faces in a live webcam feed with high accuracy and low latency.
+- **Lightweight and Fast**: Powered by the BlazeFace model, optimized for speed and efficiency.
+- **Modern Stack**: Developed using React, Vite, and TypeScript for a scalable and developer-friendly architecture.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Node.js (v14 or later)
+- npm or yarn
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Installation
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:suhasmanjunath/react-ts-realtime-facial-recognition.git
+   cd react-ts-realtime-facial-recognition
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open your browser and navigate to `http://localhost:5173`.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## How It Works
+
+1. The app uses the `react-webcam` package to access the user's webcam.
+2. TensorFlow\.js loads the BlazeFace model to detect faces in real-time.
+3. Detected faces are outlined with bounding boxes drawn on an overlaid `<canvas>` element.
+
+## Technologies Used
+
+- **React**: For building the user interface.
+- **Vite**: For a fast development environment.
+- **TypeScript**: For type-safe development.
+- **TensorFlow\.js**: For face detection with the BlazeFace model.
+- **react-webcam**: For accessing webcam streams.
+
+## Contribution
+
+Contributions are welcome! If you have suggestions or improvements, feel free to open an issue or submit a pull request.
+
+## Author
+
+👋 Hi there! I'm **Suhas Manjunath**, and I'm excited to share my 15+ years of extensive experience in delivering innovative projects that have made a significant impact across various industries.
+
+🚀 Over the course of my career, I've brought my expertise to a diverse array of impressive projects, including Tesco's CCME Interactive UI and Transport Portal, PwC's ADDA, Wabtec's Warranty Portal, Quantiply's KnowNow, Metro's NSP Portal, and Merck's mConnect Portal. I've also had the privilege of contributing to transformative initiatives like BP's ROSI Project, Renault's ICP, and Bell Canada's internal projects, each enriching my skills and insights.
+
+🌐 My goal is to create websites that exceed user expectations by seamlessly combining functionality and aesthetics. As a passionate tech enthusiast, I constantly explore the evolving technology landscape, staying ahead of trends to deliver forward-thinking solutions. I also enjoy writing about the latest tech trends and innovations, contributing to the broader tech community.
+
+🛠️ With specialization in a wide range of technologies including ReactJS, NestJS, Angular 9, Redux, Node, React Query, Spring Boot, PHP, Java/J2EE, .NET, XML, HTML, Tableau, and JavaScript, I have a comprehensive skill set that enables me to craft exceptional user experiences. My keen eye for usability and expertise in CSS and WYSIWYG layout tools further enhance my capabilities.
+
+📚 Let's connect and share our insights! Whether you're interested in discussing tech trends, collaborating on a project, or simply exchanging ideas, I'm always open to engaging with fellow enthusiasts and professionals.
+
+🌐 **Connect with me:**
+
+- [LinkedIn](https://www.linkedin.com/in/suhasmanjunath/)
+- [YouTube](https://www.youtube.com/@ourjourneywithalok)
+
+\#TechEnthusiast #WebDevelopment #UserExperience #Innovation
+
+---
+
+## License
+
+This project is licensed under the CC0 1.0 Universal License. See the `LICENSE` file for details.
